@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Portfolio</title>
+    <title>GastroDev Blog</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
   </head>
-  <%= render 'blox/jumbo' %>
   <%= render 'blox/navbar' %>
 
-  <body>
+  <body id="<%= controller.controller_name %>" class="<%= controller.action_name %><%= "show-sidebar" if @show_sidebar.present? %>">
+    <% if @show_sidebar.nil? %>
+    <header>
+      <%= render 'blox/navbar' %>
+    </header>
     <%= yield %>
+    <% else %>
+    <%= render 'blox/dashnav' %>
+
+    <div class="container-fluid">
+      <div class="row">
+        <%= render "blox/sidebar" %>
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 mt-4">
+        <%= yield %>
+        </main>
+      </div>
+    </div>
+    <% end %>
+
+
+
+  
     <%= render 'blox/footer' %>
+    <script src="https://kit.fontawesome.com/8b41eb6f53.js" crossorigin="anonymous"></script>
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+
   </body>
 </html>

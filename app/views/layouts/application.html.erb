@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Portfolio</title>
+    <title>GastroDev Blog</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
   </head>
-  <%= render 'blox/jumbo' %>
   <%= render 'blox/navbar' %>
 
   <body>
@@ -22,6 +22,7 @@
 
     <%= yield %>
     <%= render 'blox/footer' %>
+    <script src="https://kit.fontawesome.com/8b41eb6f53.js" crossorigin="anonymous"></script>
 
   </body>
 </html>

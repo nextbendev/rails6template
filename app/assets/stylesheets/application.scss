@@ -1,0 +1,290 @@
+/*
+ *= require bootstrap
+ *= require_tree .
+ *= require_self
+ */
+
+
+ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+ body, html {
+   height: 100%;
+   color: #777;
+   line-height: 1.8;
+ }
+
+ /* Create a Parallax Effect */
+.bgimg-2, .bgimg-3 {
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
+
+ /* First image (Logo. Full height) */
+ .bgimg-1 {
+   background-image: url('https://gastroben.s3.amazonaws.com/Self/78381910_10156476564580059_1813625407606358016_o.jpg');
+   min-height: 100%;
+   background-attachment: fixed;
+   background-position: bottom;
+   background-repeat: no-repeat;
+   background-size: cover;
+
+
+ }
+
+ /* Second image (Portfolio) */
+ .bgimg-2 {
+   background-image: url("https://gastroben.s3.amazonaws.com/Self/78381910_10156476564580059_1813625407606358016_o.jpg");
+   min-height: 400px;
+ }
+
+ /* Third image (Contact) */
+ .bgimg-3 {
+   background-image: url("https://gastroben.s3.amazonaws.com/Self/10403261_10152405725355059_5361786224760114265_n.jpg");
+   min-height: 400px;
+ }
+
+ .gastroDev-wide {letter-spacing: 10px;}
+ .gastroDev-hover-opacity {cursor: pointer;}
+
+ /* Turn off parallax scrolling for tablets and phones */
+ @media only screen and (max-device-width: 1600px) {
+   .bgimg-1, .bgimg-2, .bgimg-3 {
+     background-attachment: scroll;
+     min-height: 400px;
+   }
+ }
+
+
+ /* gastroDev.CSS 4.13 June 2019 by Jan Egil and Borge Refsnes */
+ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
+ /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+ html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
+ article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{display:block}summary{display:list-item}
+ audio,canvas,progress,video{display:inline-block}progress{vertical-align:baseline}
+ audio:not([controls]){display:none;height:0}[hidden],template{display:none}
+ a{background-color:transparent}a:active,a:hover{outline-width:0}
+ abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
+ b,strong{font-weight:bolder}dfn{font-style:italic}mark{background:#ff0;color:#000}
+ small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+ sub{bottom:-0.25em}sup{top:-0.5em}figure{margin:1em 40px}img{border-style:none}
+ code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}hr{box-sizing:content-box;height:0;overflow:visible}
+ button,input,select,textarea,optgroup{font:inherit;margin:0}optgroup{font-weight:bold}
+ button,input{overflow:visible}button,select{text-transform:none}
+ button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button}
+ button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}
+ button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}
+ fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}
+ legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}
+ [type=checkbox],[type=radio]{padding:0}
+ [type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}
+ [type=search]{-webkit-appearance:textfield;outline-offset:-2px}
+ [type=search]::-webkit-search-decoration{-webkit-appearance:none}
+ ::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+ /* End extract */
+ html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}html{overflow-x:hidden}
+ h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}.gastroDev-serif{font-family:serif}
+ h1,h2,h3,h4,h5,h6{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin:10px 0}.gastroDev-wide{letter-spacing:4px}
+ hr{border:0;border-top:1px solid #eee;margin:20px 0}
+ .gastroDev-image{max-width:100%;height:auto}img{vertical-align:middle}a{color:inherit}
+ .gastroDev-table,.gastroDev-table-all{border-collapse:collapse;border-spacing:0;width:100%;display:table}.gastroDev-table-all{border:1px solid #ccc}
+ .gastroDev-bordered tr,.gastroDev-table-all tr{border-bottom:1px solid #ddd}.gastroDev-striped tbody tr:nth-child(even){background-color:#f1f1f1}
+ .gastroDev-table-all tr:nth-child(odd){background-color:#fff}.gastroDev-table-all tr:nth-child(even){background-color:#f1f1f1}
+ .gastroDev-hoverable tbody tr:hover,.gastroDev-ul.gastroDev-hoverable li:hover{background-color:#ccc}.gastroDev-centered tr th,.gastroDev-centered tr td{text-align:center}
+ .gastroDev-table td,.gastroDev-table th,.gastroDev-table-all td,.gastroDev-table-all th{padding:8px 8px;display:table-cell;text-align:left;vertical-align:top}
+ .gastroDev-table th:first-child,.gastroDev-table td:first-child,.gastroDev-table-all th:first-child,.gastroDev-table-all td:first-child{padding-left:16px}
+ .gastroDev-btn,.gastroDev-button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
+ .gastroDev-btn:hover{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}
+ .gastroDev-btn,.gastroDev-button{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+ .gastroDev-disabled,.gastroDev-btn:disabled,.gastroDev-button:disabled{cursor:not-allowed;opacity:0.3}.gastroDev-disabled *,:disabled *{pointer-events:none}
+ .gastroDev-btn.gastroDev-disabled:hover,.gastroDev-btn:disabled:hover{box-shadow:none}
+ .gastroDev-badge,.gastroDev-tag{background-color:#000;color:#fff;display:inline-block;padding-left:8px;padding-right:8px;text-align:center}.gastroDev-badge{border-radius:50%}
+ .gastroDev-ul{list-style-type:none;padding:0;margin:0}.gastroDev-ul li{padding:8px 16px;border-bottom:1px solid #ddd}.gastroDev-ul li:last-child{border-bottom:none}
+ .gastroDev-tooltip,.gastroDev-display-container{position:relative}.gastroDev-tooltip .gastroDev-text{display:none}.gastroDev-tooltip:hover .gastroDev-text{display:inline-block}
+ .gastroDev-ripple:active{opacity:0.5}.gastroDev-ripple{transition:opacity 0s}
+ .gastroDev-input{padding:8px;display:block;border:none;border-bottom:1px solid #ccc;width:100%}
+ .gastroDev-select{padding:9px 0;width:100%;border:none;border-bottom:1px solid #ccc}
+ .gastroDev-dropdown-click,.gastroDev-dropdown-hover{position:relative;display:inline-block;cursor:pointer}
+ .gastroDev-dropdown-hover:hover .gastroDev-dropdown-content{display:block}
+ .gastroDev-dropdown-hover:first-child,.gastroDev-dropdown-click:hover{background-color:#ccc;color:#000}
+ .gastroDev-dropdown-hover:hover > .gastroDev-button:first-child,.gastroDev-dropdown-click:hover > .gastroDev-button:first-child{background-color:#ccc;color:#000}
+ .gastroDev-dropdown-content{cursor:auto;color:#000;background-color:#fff;display:none;position:absolute;min-width:160px;margin:0;padding:0;z-index:1}
+ .gastroDev-check,.gastroDev-radio{width:24px;height:24px;position:relative;top:6px}
+ .gastroDev-sidebar{height:100%;width:200px;background-color:#fff;position:fixed!important;z-index:1;overflow:auto}
+ .gastroDev-bar-block .gastroDev-dropdown-hover,.gastroDev-bar-block .gastroDev-dropdown-click{width:100%}
+ .gastroDev-bar-block .gastroDev-dropdown-hover .gastroDev-dropdown-content,.gastroDev-bar-block .gastroDev-dropdown-click .gastroDev-dropdown-content{min-width:100%}
+ .gastroDev-bar-block .gastroDev-dropdown-hover .gastroDev-button,.gastroDev-bar-block .gastroDev-dropdown-click .gastroDev-button{width:100%;text-align:left;padding:8px 16px}
+ .gastroDev-main,#main{transition:margin-left .4s}
+ .gastroDev-modal{z-index:3;display:none;padding-top:100px;position:fixed;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.4)}
+ .gastroDev-modal-content{margin:auto;background-color:#fff;position:relative;padding:0;outline:0;width:600px}
+ .gastroDev-bar{width:100%;overflow:hidden}.gastroDev-center .gastroDev-bar{display:inline-block;width:auto}
+ .gastroDev-bar .gastroDev-bar-item{padding:8px 16px;float:left;width:auto;border:none;display:block;outline:0}
+ .gastroDev-bar .gastroDev-dropdown-hover,.gastroDev-bar .gastroDev-dropdown-click{position:static;float:left}
+ .gastroDev-bar .gastroDev-button{white-space:normal}
+ .gastroDev-bar-block .gastroDev-bar-item{width:100%;display:block;padding:8px 16px;text-align:left;border:none;white-space:normal;float:none;outline:0}
+ .gastroDev-bar-block.gastroDev-center .gastroDev-bar-item{text-align:center}.gastroDev-block{display:block;width:100%}
+ .gastroDev-responsive{display:block;overflow-x:auto}
+ .gastroDev-container:after,.gastroDev-container:before,.gastroDev-panel:after,.gastroDev-panel:before,.gastroDev-row:after,.gastroDev-row:before,.gastroDev-row-padding:after,.gastroDev-row-padding:before,
+ .gastroDev-cell-row:before,.gastroDev-cell-row:after,.gastroDev-clear:after,.gastroDev-clear:before,.gastroDev-bar:before,.gastroDev-bar:after{content:"";display:table;clear:both}
+ .gastroDev-col,.gastroDev-half,.gastroDev-third,.gastroDev-twothird,.gastroDev-threequarter,.gastroDev-quarter{float:left;width:100%}
+ .gastroDev-col.s1{width:8.33333%}.gastroDev-col.s2{width:16.66666%}.gastroDev-col.s3{width:24.99999%}.gastroDev-col.s4{width:33.33333%}
+ .gastroDev-col.s5{width:41.66666%}.gastroDev-col.s6{width:49.99999%}.gastroDev-col.s7{width:58.33333%}.gastroDev-col.s8{width:66.66666%}
+ .gastroDev-col.s9{width:74.99999%}.gastroDev-col.s10{width:83.33333%}.gastroDev-col.s11{width:91.66666%}.gastroDev-col.s12{width:99.99999%}
+ @media (min-width:601px){.gastroDev-col.m1{width:8.33333%}.gastroDev-col.m2{width:16.66666%}.gastroDev-col.m3,.gastroDev-quarter{width:24.99999%}.gastroDev-col.m4,.gastroDev-third{width:33.33333%}
+ .gastroDev-col.m5{width:41.66666%}.gastroDev-col.m6,.gastroDev-half{width:49.99999%}.gastroDev-col.m7{width:58.33333%}.gastroDev-col.m8,.gastroDev-twothird{width:66.66666%}
+ .gastroDev-col.m9,.gastroDev-threequarter{width:74.99999%}.gastroDev-col.m10{width:83.33333%}.gastroDev-col.m11{width:91.66666%}.gastroDev-col.m12{width:99.99999%}}
+ @media (min-width:993px){.gastroDev-col.l1{width:8.33333%}.gastroDev-col.l2{width:16.66666%}.gastroDev-col.l3{width:24.99999%}.gastroDev-col.l4{width:33.33333%}
+ .gastroDev-col.l5{width:41.66666%}.gastroDev-col.l6{width:49.99999%}.gastroDev-col.l7{width:58.33333%}.gastroDev-col.l8{width:66.66666%}
+ .gastroDev-col.l9{width:74.99999%}.gastroDev-col.l10{width:83.33333%}.gastroDev-col.l11{width:91.66666%}.gastroDev-col.l12{width:99.99999%}}
+ .gastroDev-rest{overflow:hidden}.gastroDev-stretch{margin-left:-16px;margin-right:-16px}
+ .gastroDev-content,.gastroDev-auto{margin-left:auto;margin-right:auto}.gastroDev-content{max-width:980px}.gastroDev-auto{max-width:1140px}
+ .gastroDev-cell-row{display:table;width:100%}.gastroDev-cell{display:table-cell}
+ .gastroDev-cell-top{vertical-align:top}.gastroDev-cell-middle{vertical-align:middle}.gastroDev-cell-bottom{vertical-align:bottom}
+ .gastroDev-hide{display:none!important}.gastroDev-show-block,.gastroDev-show{display:block!important}.gastroDev-show-inline-block{display:inline-block!important}
+ @media (max-width:1205px){.gastroDev-auto{max-width:95%}}
+ @media (max-width:600px){.gastroDev-modal-content{margin:0 10px;width:auto!important}.gastroDev-modal{padding-top:30px}
+ .gastroDev-dropdown-hover.gastroDev-mobile .gastroDev-dropdown-content,.gastroDev-dropdown-click.gastroDev-mobile .gastroDev-dropdown-content{position:relative}
+ .gastroDev-hide-small{display:none!important}.gastroDev-mobile{display:block;width:100%!important}.gastroDev-bar-item.gastroDev-mobile,.gastroDev-dropdown-hover.gastroDev-mobile,.gastroDev-dropdown-click.gastroDev-mobile{text-align:center}
+ .gastroDev-dropdown-hover.gastroDev-mobile,.gastroDev-dropdown-hover.gastroDev-mobile .gastroDev-btn,.gastroDev-dropdown-hover.gastroDev-mobile .gastroDev-button,.gastroDev-dropdown-click.gastroDev-mobile,.gastroDev-dropdown-click.gastroDev-mobile .gastroDev-btn,.gastroDev-dropdown-click.gastroDev-mobile .gastroDev-button{width:100%}}
+ @media (max-width:768px){.gastroDev-modal-content{width:500px}.gastroDev-modal{padding-top:50px}}
+ @media (min-width:993px){.gastroDev-modal-content{width:900px}.gastroDev-hide-large{display:none!important}.gastroDev-sidebar.gastroDev-collapse{display:block!important}}
+ @media (max-width:992px) and (min-width:601px){.gastroDev-hide-medium{display:none!important}}
+ @media (max-width:992px){.gastroDev-sidebar.gastroDev-collapse{display:none}.gastroDev-main{margin-left:0!important;margin-right:0!important}.gastroDev-auto{max-width:100%}}
+ .gastroDev-top,.gastroDev-bottom{position:fixed;width:100%;z-index:1}.gastroDev-top{top:0}.gastroDev-bottom{bottom:0}
+ .gastroDev-overlay{position:fixed;display:none;width:100%;height:100%;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0.5);z-index:2}
+ .gastroDev-display-topleft{position:absolute;left:0;top:0}.gastroDev-display-topright{position:absolute;right:0;top:0}
+ .gastroDev-display-bottomleft{position:absolute;left:0;bottom:0}.gastroDev-display-bottomright{position:absolute;right:0;bottom:0}
+ .gastroDev-display-middle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
+ .gastroDev-display-left{position:absolute;top:50%;left:0%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
+ .gastroDev-display-right{position:absolute;top:50%;right:0%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%)}
+ .gastroDev-display-topmiddle{position:absolute;left:50%;top:0;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%)}
+ .gastroDev-display-bottommiddle{position:absolute;left:50%;bottom:0;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%)}
+ .gastroDev-display-container:hover .gastroDev-display-hover{display:block}.gastroDev-display-container:hover span.gastroDev-display-hover{display:inline-block}.gastroDev-display-hover{display:none}
+ .gastroDev-display-position{position:absolute}
+ .gastroDev-circle{border-radius:50%}
+ .gastroDev-round-small{border-radius:2px}.gastroDev-round,.gastroDev-round-medium{border-radius:4px}.gastroDev-round-large{border-radius:8px}.gastroDev-round-xlarge{border-radius:16px}.gastroDev-round-xxlarge{border-radius:32px}
+ .gastroDev-row-padding,.gastroDev-row-padding>.gastroDev-half,.gastroDev-row-padding>.gastroDev-third,.gastroDev-row-padding>.gastroDev-twothird,.gastroDev-row-padding>.gastroDev-threequarter,.gastroDev-row-padding>.gastroDev-quarter,.gastroDev-row-padding>.gastroDev-col{padding:0 8px}
+ .gastroDev-container,.gastroDev-panel{padding:0.01em 16px}.gastroDev-panel{margin-top:16px;margin-bottom:16px}
+ .gastroDev-code,.gastroDev-codespan{font-family:Consolas,"courier new";font-size:16px}
+ .gastroDev-code{width:auto;background-color:#fff;padding:8px 12px;border-left:4px solid #4CAF50;word-wrap:break-word}
+ .gastroDev-codespan{color:crimson;background-color:#f1f1f1;padding-left:4px;padding-right:4px;font-size:110%}
+ .gastroDev-card,.gastroDev-card-2{box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)}
+ .gastroDev-card-4,.gastroDev-hover-shadow:hover{box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)}
+ .gastroDev-spin{animation:gastroDev-spin 2s infinite linear}@keyframes gastroDev-spin{0%{transform:rotate(0deg)}100%{transform:rotate(359deg)}}
+ .gastroDev-animate-fading{animation:fading 10s infinite}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+ .gastroDev-animate-opacity{animation:opac 0.8s}@keyframes opac{from{opacity:0} to{opacity:1}}
+ .gastroDev-animate-top{position:relative;animation:animatetop 0.4s}@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
+ .gastroDev-animate-left{position:relative;animation:animateleft 0.4s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
+ .gastroDev-animate-right{position:relative;animation:animateright 0.4s}@keyframes animateright{from{right:-300px;opacity:0} to{right:0;opacity:1}}
+ .gastroDev-animate-bottom{position:relative;animation:animatebottom 0.4s}@keyframes animatebottom{from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}}
+ .gastroDev-animate-zoom {animation:animatezoom 0.6s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+ .gastroDev-animate-input{transition:width 0.4s ease-in-out}.gastroDev-animate-input:focus{width:100%!important}
+ .gastroDev-opacity,.gastroDev-hover-opacity:hover{opacity:0.60}.gastroDev-opacity-off,.gastroDev-hover-opacity-off:hover{opacity:1}
+ .gastroDev-opacity-max{opacity:0.25}.gastroDev-opacity-min{opacity:0.75}
+ .gastroDev-greyscale-max,.gastroDev-grayscale-max,.gastroDev-hover-greyscale:hover,.gastroDev-hover-grayscale:hover{filter:grayscale(100%)}
+ .gastroDev-greyscale,.gastroDev-grayscale{filter:grayscale(75%)}.gastroDev-greyscale-min,.gastroDev-grayscale-min{filter:grayscale(50%)}
+ .gastroDev-sepia{filter:sepia(75%)}.gastroDev-sepia-max,.gastroDev-hover-sepia:hover{filter:sepia(100%)}.gastroDev-sepia-min{filter:sepia(50%)}
+ .gastroDev-tiny{font-size:10px!important}.gastroDev-small{font-size:12px!important}.gastroDev-medium{font-size:15px!important}.gastroDev-large{font-size:18px!important}
+ .gastroDev-xlarge{font-size:24px!important}.gastroDev-xxlarge{font-size:36px!important}.gastroDev-xxxlarge{font-size:48px!important}.gastroDev-jumbo{font-size:64px!important}
+ .gastroDev-left-align{text-align:left!important}.gastroDev-right-align{text-align:right!important}.gastroDev-justify{text-align:justify!important}.gastroDev-center{text-align:center!important}
+ .gastroDev-border-0{border:0!important}.gastroDev-border{border:1px solid #ccc!important}
+ .gastroDev-border-top{border-top:1px solid #ccc!important}.gastroDev-border-bottom{border-bottom:1px solid #ccc!important}
+ .gastroDev-border-left{border-left:1px solid #ccc!important}.gastroDev-border-right{border-right:1px solid #ccc!important}
+ .gastroDev-topbar{border-top:6px solid #ccc!important}.gastroDev-bottombar{border-bottom:6px solid #ccc!important}
+ .gastroDev-leftbar{border-left:6px solid #ccc!important}.gastroDev-rightbar{border-right:6px solid #ccc!important}
+ .gastroDev-section,.gastroDev-code{margin-top:16px!important;margin-bottom:16px!important}
+ .gastroDev-margin{margin:16px!important}.gastroDev-margin-top{margin-top:16px!important}.gastroDev-margin-bottom{margin-bottom:16px!important}
+ .gastroDev-margin-left{margin-left:16px!important}.gastroDev-margin-right{margin-right:16px!important}
+ .gastroDev-padding-small{padding:4px 8px!important}.gastroDev-padding{padding:8px 16px!important}.gastroDev-padding-large{padding:12px 24px!important}
+ .gastroDev-padding-16{padding-top:16px!important;padding-bottom:16px!important}.gastroDev-padding-24{padding-top:24px!important;padding-bottom:24px!important}
+ .gastroDev-padding-32{padding-top:32px!important;padding-bottom:32px!important}.gastroDev-padding-48{padding-top:48px!important;padding-bottom:48px!important}
+ .gastroDev-padding-64{padding-top:64px!important;padding-bottom:64px!important}
+ .gastroDev-left{float:left!important}.gastroDev-right{float:right!important}
+ .gastroDev-button:hover{color:#000!important;background-color:#ccc!important}
+ .gastroDev-transparent,.gastroDev-hover-none:hover{background-color:transparent!important}
+ .gastroDev-hover-none:hover{box-shadow:none!important}
+ /* Colors */
+ .gastroDev-amber,.gastroDev-hover-amber:hover{color:#000!important;background-color:#ffc107!important}
+ .gastroDev-aqua,.gastroDev-hover-aqua:hover{color:#000!important;background-color:#00ffff!important}
+ .gastroDev-blue,.gastroDev-hover-blue:hover{color:#fff!important;background-color:#2196F3!important}
+ .gastroDev-light-blue,.gastroDev-hover-light-blue:hover{color:#000!important;background-color:#87CEEB!important}
+ .gastroDev-brown,.gastroDev-hover-brown:hover{color:#fff!important;background-color:#795548!important}
+ .gastroDev-cyan,.gastroDev-hover-cyan:hover{color:#000!important;background-color:#00bcd4!important}
+ .gastroDev-blue-grey,.gastroDev-hover-blue-grey:hover,.gastroDev-blue-gray,.gastroDev-hover-blue-gray:hover{color:#fff!important;background-color:#607d8b!important}
+ .gastroDev-green,.gastroDev-hover-green:hover{color:#fff!important;background-color:#4CAF50!important}
+ .gastroDev-light-green,.gastroDev-hover-light-green:hover{color:#000!important;background-color:#8bc34a!important}
+ .gastroDev-indigo,.gastroDev-hover-indigo:hover{color:#fff!important;background-color:#3f51b5!important}
+ .gastroDev-khaki,.gastroDev-hover-khaki:hover{color:#000!important;background-color:#f0e68c!important}
+ .gastroDev-lime,.gastroDev-hover-lime:hover{color:#000!important;background-color:#cddc39!important}
+ .gastroDev-orange,.gastroDev-hover-orange:hover{color:#000!important;background-color:#ff9800!important}
+ .gastroDev-deep-orange,.gastroDev-hover-deep-orange:hover{color:#fff!important;background-color:#ff5722!important}
+ .gastroDev-pink,.gastroDev-hover-pink:hover{color:#fff!important;background-color:#e91e63!important}
+ .gastroDev-purple,.gastroDev-hover-purple:hover{color:#fff!important;background-color:#9c27b0!important}
+ .gastroDev-deep-purple,.gastroDev-hover-deep-purple:hover{color:#fff!important;background-color:#673ab7!important}
+ .gastroDev-red,.gastroDev-hover-red:hover{color:#fff!important;background-color:#f44336!important}
+ .gastroDev-sand,.gastroDev-hover-sand:hover{color:#000!important;background-color:#fdf5e6!important}
+ .gastroDev-teal,.gastroDev-hover-teal:hover{color:#fff!important;background-color:#009688!important}
+ .gastroDev-yellow,.gastroDev-hover-yellow:hover{color:#000!important;background-color:#ffeb3b!important}
+ .gastroDev-white,.gastroDev-hover-white:hover{color:#000!important;background-color:#fff!important}
+ .gastroDev-black,.gastroDev-hover-black:hover{color:#fff!important;background-color:#000!important}
+ .gastroDev-grey,.gastroDev-hover-grey:hover,.gastroDev-gray,.gastroDev-hover-gray:hover{color:#000!important;background-color:#9e9e9e!important}
+ .gastroDev-light-grey,.gastroDev-hover-light-grey:hover,.gastroDev-light-gray,.gastroDev-hover-light-gray:hover{color:#000!important;background-color:#f1f1f1!important}
+ .gastroDev-dark-grey,.gastroDev-hover-dark-grey:hover,.gastroDev-dark-gray,.gastroDev-hover-dark-gray:hover{color:#fff!important;background-color:#616161!important}
+ .gastroDev-pale-red,.gastroDev-hover-pale-red:hover{color:#000!important;background-color:#ffdddd!important}
+ .gastroDev-pale-green,.gastroDev-hover-pale-green:hover{color:#000!important;background-color:#ddffdd!important}
+ .gastroDev-pale-yellow,.gastroDev-hover-pale-yellow:hover{color:#000!important;background-color:#ffffcc!important}
+ .gastroDev-pale-blue,.gastroDev-hover-pale-blue:hover{color:#000!important;background-color:#ddffff!important}
+ .gastroDev-text-amber,.gastroDev-hover-text-amber:hover{color:#ffc107!important}
+ .gastroDev-text-aqua,.gastroDev-hover-text-aqua:hover{color:#00ffff!important}
+ .gastroDev-text-blue,.gastroDev-hover-text-blue:hover{color:#2196F3!important}
+ .gastroDev-text-light-blue,.gastroDev-hover-text-light-blue:hover{color:#87CEEB!important}
+ .gastroDev-text-brown,.gastroDev-hover-text-brown:hover{color:#795548!important}
+ .gastroDev-text-cyan,.gastroDev-hover-text-cyan:hover{color:#00bcd4!important}
+ .gastroDev-text-blue-grey,.gastroDev-hover-text-blue-grey:hover,.gastroDev-text-blue-gray,.gastroDev-hover-text-blue-gray:hover{color:#607d8b!important}
+ .gastroDev-text-green,.gastroDev-hover-text-green:hover{color:#4CAF50!important}
+ .gastroDev-text-light-green,.gastroDev-hover-text-light-green:hover{color:#8bc34a!important}
+ .gastroDev-text-indigo,.gastroDev-hover-text-indigo:hover{color:#3f51b5!important}
+ .gastroDev-text-khaki,.gastroDev-hover-text-khaki:hover{color:#b4aa50!important}
+ .gastroDev-text-lime,.gastroDev-hover-text-lime:hover{color:#cddc39!important}
+ .gastroDev-text-orange,.gastroDev-hover-text-orange:hover{color:#ff9800!important}
+ .gastroDev-text-deep-orange,.gastroDev-hover-text-deep-orange:hover{color:#ff5722!important}
+ .gastroDev-text-pink,.gastroDev-hover-text-pink:hover{color:#e91e63!important}
+ .gastroDev-text-purple,.gastroDev-hover-text-purple:hover{color:#9c27b0!important}
+ .gastroDev-text-deep-purple,.gastroDev-hover-text-deep-purple:hover{color:#673ab7!important}
+ .gastroDev-text-red,.gastroDev-hover-text-red:hover{color:#f44336!important}
+ .gastroDev-text-sand,.gastroDev-hover-text-sand:hover{color:#fdf5e6!important}
+ .gastroDev-text-teal,.gastroDev-hover-text-teal:hover{color:#009688!important}
+ .gastroDev-text-yellow,.gastroDev-hover-text-yellow:hover{color:#d2be0e!important}
+ .gastroDev-text-white,.gastroDev-hover-text-white:hover{color:#fff!important}
+ .gastroDev-text-black,.gastroDev-hover-text-black:hover{color:#000!important}
+ .gastroDev-text-grey,.gastroDev-hover-text-grey:hover,.gastroDev-text-gray,.gastroDev-hover-text-gray:hover{color:#757575!important}
+ .gastroDev-text-light-grey,.gastroDev-hover-text-light-grey:hover,.gastroDev-text-light-gray,.gastroDev-hover-text-light-gray:hover{color:#f1f1f1!important}
+ .gastroDev-text-dark-grey,.gastroDev-hover-text-dark-grey:hover,.gastroDev-text-dark-gray,.gastroDev-hover-text-dark-gray:hover{color:#3a3a3a!important}
+ .gastroDev-border-amber,.gastroDev-hover-border-amber:hover{border-color:#ffc107!important}
+ .gastroDev-border-aqua,.gastroDev-hover-border-aqua:hover{border-color:#00ffff!important}
+ .gastroDev-border-blue,.gastroDev-hover-border-blue:hover{border-color:#2196F3!important}
+ .gastroDev-border-light-blue,.gastroDev-hover-border-light-blue:hover{border-color:#87CEEB!important}
+ .gastroDev-border-brown,.gastroDev-hover-border-brown:hover{border-color:#795548!important}
+ .gastroDev-border-cyan,.gastroDev-hover-border-cyan:hover{border-color:#00bcd4!important}
+ .gastroDev-border-blue-grey,.gastroDev-hover-border-blue-grey:hover,.gastroDev-border-blue-gray,.gastroDev-hover-border-blue-gray:hover{border-color:#607d8b!important}
+ .gastroDev-border-green,.gastroDev-hover-border-green:hover{border-color:#4CAF50!important}
+ .gastroDev-border-light-green,.gastroDev-hover-border-light-green:hover{border-color:#8bc34a!important}
+ .gastroDev-border-indigo,.gastroDev-hover-border-indigo:hover{border-color:#3f51b5!important}
+ .gastroDev-border-khaki,.gastroDev-hover-border-khaki:hover{border-color:#f0e68c!important}
+ .gastroDev-border-lime,.gastroDev-hover-border-lime:hover{border-color:#cddc39!important}
+ .gastroDev-border-orange,.gastroDev-hover-border-orange:hover{border-color:#ff9800!important}
+ .gastroDev-border-deep-orange,.gastroDev-hover-border-deep-orange:hover{border-color:#ff5722!important}
+ .gastroDev-border-pink,.gastroDev-hover-border-pink:hover{border-color:#e91e63!important}
+ .gastroDev-border-purple,.gastroDev-hover-border-purple:hover{border-color:#9c27b0!important}
+ .gastroDev-border-deep-purple,.gastroDev-hover-border-deep-purple:hover{border-color:#673ab7!important}
+ .gastroDev-border-red,.gastroDev-hover-border-red:hover{border-color:#f44336!important}
+ .gastroDev-border-sand,.gastroDev-hover-border-sand:hover{border-color:#fdf5e6!important}
+ .gastroDev-border-teal,.gastroDev-hover-border-teal:hover{border-color:#009688!important}
+ .gastroDev-border-yellow,.gastroDev-hover-border-yellow:hover{border-color:#ffeb3b!important}
+ .gastroDev-border-white,.gastroDev-hover-border-white:hover{border-color:#fff!important}
+ .gastroDev-border-black,.gastroDev-hover-border-black:hover{border-color:#000!important}
+ .gastroDev-border-grey,.gastroDev-hover-border-grey:hover,.gastroDev-border-gray,.gastroDev-hover-border-gray:hover{border-color:#9e9e9e!important}
+ .gastroDev-border-light-grey,.gastroDev-hover-border-light-grey:hover,.gastroDev-border-light-gray,.gastroDev-hover-border-light-gray:hover{border-color:#f1f1f1!important}
+ .gastroDev-border-dark-grey,.gastroDev-hover-border-dark-grey:hover,.gastroDev-border-dark-gray,.gastroDev-hover-border-dark-gray:hover{border-color:#616161!important}
+ .gastroDev-border-pale-red,.gastroDev-hover-border-pale-red:hover{border-color:#ffe7e7!important}.gastroDev-border-pale-green,.gastroDev-hover-border-pale-green:hover{border-color:#e7ffe7!important}
+ .gastroDev-border-pale-yellow,.gastroDev-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.gastroDev-border-pale-blue,.gastroDev-hover-border-pale-blue:hover{border-color:#e7ffff!important}

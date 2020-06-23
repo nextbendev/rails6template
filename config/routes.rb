@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'home/dashboard'
   resources :categories
   resources :blogs
   devise_for :users

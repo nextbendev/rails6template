@@ -1,0 +1,61 @@
+blogs#show
+<p>
+  <strong>Title:</strong>
+  <%= @blog.title %>
+</p>
+<p>
+  <strong>Content:</strong>
+  <%= @blog.content %>
+</p>
+<p>
+  <strong>Category:</strong>
+  <%= @blog.category_id %>
+</p>
+<p>
+  <strong>Photo:</strong>
+  <%= @blog.photo %>
+</p>
+<%= link_to 'Edit', edit_blog_path(@blog) %> |
+<%= link_to 'Back', blogs_path %>
+#####
+
+
+<table class="mt-5">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+
+      <th>Photo</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @blogs.each do |blog| %>
+      <tr>
+        <td><%= blog.title %></td>
+        <td><%= blog.content %></td>
+
+        <td><%= blog.photo %></td>
+        <td><%= link_to 'Show', blog %></td>
+        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
+        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Blog', new_blog_path %>
+
+
+<div class="container-fluid mt-3">
+  <h1>Category: <%= @blog.category.category %></h1>
+  <h3><%= @blog.title %></h3>
+  <p><%= @blog.content%></p>
+  <%= link_to "Edit", edit_blog_path(@blog.id), class: 'btn btn-outline-primary' %>
+  <%= link_to "Destroy", blog_path(@blog.id), method: :delete, class: 'btn btn-outline-danger' %>
+  <%= link_to "Back", blogs_path, class: 'btn btn-outline-secondary' %>
+</div>

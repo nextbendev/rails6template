@@ -2,9 +2,15 @@ class HomeController < ApplicationController
     before_action :set_sidebar, except: [:index]
 
   def index
+    @users = User.all
+    @blogs = Blog.all
+    @categories = Category.all
   end
+
   def dashboard
-    # code
+    @users = User.all
+    @blogs = Blog.all
+    @categories = Category.all
   end
 
   private

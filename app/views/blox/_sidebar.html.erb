@@ -2,15 +2,21 @@
   <div class="sidebar-sticky pt-3">
     <ul class="nav flex-column">
       <li class="nav-item">
-        <%= link_to blogs_path, class: "nav-link active" do %>
+        <%= link_to home_dashboard_path, class: "nav-link active" do %>
           <i class="fas fa-desktop"></i>
           Dashboard <span class="sr-only">(current)</span>
         <% end %>
       </li>
       <li class="nav-item">
-        <%= link_to categories_path, class: "nav-link" do %>
+        <%= link_to new_blog_path, class: "nav-link active" do %>
+          <i class="fas fa-blog"></i>
+          New Blog <span class="sr-only">(current)</span>
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <%= link_to new_category_path, class: "nav-link" do %>
           <i class="fas fa-house-user"></i>
-          Categories <span class="sr-only">(current)</span>
+          New Category <span class="sr-only">(current)</span>
         <% end %>
       </li>
     </ul>

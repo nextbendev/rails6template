@@ -5,26 +5,26 @@
       <i class="fa fa-bars"></i>
     </a>
       <% if user_signed_in? %>
-    <%= link_to "HOME", root_path, class: 'gastroDev-bar-item gastroDev-button' %>
+    <%= link_to root_path, class: 'gastroDev-bar-item gastroDev-button' do %>
+    <i class="fas fa-home"></i> HOME<span class="sr-only">(current)</span>
+  <% end %>
     <a href="#about" class="gastroDev-bar-item gastroDev-button gastroDev-hide-small"><i class="fa fa-user"></i> ABOUT</a>
     <a href="#portfolio" class="gastroDev-bar-item gastroDev-button gastroDev-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
     <a href="#contact" class="gastroDev-bar-item gastroDev-button gastroDev-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
     <a href="#" class="gastroDev-bar-item gastroDev-button gastroDev-hide-small gastroDev-right gastroDev-hover-red">
-    <%= link_to "BLOG", blogs_path, class: 'gastroDev-bar-item gastroDev-button' %>
-    <%= link_to "NEW BLOG", new_blog_path, class: 'gastroDev-bar-item gastroDev-button' %>
-    <%= link_to "NEW CATEGORY", new_category_path, class: 'gastroDev-bar-item gastroDev-button' %>
-    <%= link_to "DASHBOARD", home_dashboard_path, class: 'gastroDev-bar-item gastroDev-button' %>
-
+    <%= link_to blogs_path, class: "gastroDev-bar-item gastroDev-button gastroDev-hide-small" do %>
+      <i class="fas fa-blog"></i> Blog <span class="sr-only">(current)</span>
+    <% end %>
     <% else %>
     <%= link_to "HOME", root_path, class: 'gastroDev-bar-item gastroDev-button' %>
     <a href="#about" class="gastroDev-bar-item gastroDev-button gastroDev-hide-small"><i class="fa fa-user"></i> ABOUT</a>
     <a href="#portfolio" class="gastroDev-bar-item gastroDev-button gastroDev-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
     <a href="#contact" class="gastroDev-bar-item gastroDev-button gastroDev-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-    <a href="#" class="gastroDev-bar-item gastroDev-button gastroDev-hide-small gastroDev-right gastroDev-hover-red">
-    <%= link_to "BLOG", blogs_path, class: 'gastroDev-bar-item gastroDev-button' %>
-
-    </a>
+    <%= link_to blogs_path, class: "gastroDev-bar-item gastroDev-button gastroDev-hide-small" do %>
+      <i class="fas fa-blog"></i> Blog <span class="sr-only">(current)</span>
     <% end %>
+  <% end %>
+  
   </div>
 
   <!-- Navbar on small screens -->

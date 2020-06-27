@@ -6,7 +6,7 @@
         <div class="card mt-3">
           <div class="card-body">
             <h3><%= link_to blog.title, blog_path(blog.id) %></h3>
-            <p><%= blog.content[0,70] %></p>
+            <p><%= blog.content[0,200] %></p>
             <%= link_to "View", blog_path(blog.id), class: 'btn btn-primary' %>
           </div>
         </div>

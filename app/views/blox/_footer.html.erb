@@ -12,4 +12,7 @@
     <%= link_to "Sign up", new_user_registration_path, :class => 'gastroDev-bar-item gastroDev-button gastroDev-hide-small'  %>
     <%= link_to "Login", new_user_session_path, :class => 'gastroDev-bar-item gastroDev-button gastroDev-hide-small'  %>
   <% end %>
+<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'gastroDev-bar-item gastroDev-button gastroDev-hide-small'  %>
+  
+
 </footer>

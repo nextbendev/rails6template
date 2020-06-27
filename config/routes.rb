@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :notes
   get 'home/dashboard'
   resources :categories
   resources :blogs

@@ -105,20 +105,7 @@
 
       </div>
       <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
-      <form action="/action_page.php" target="_blank">
-        <div class="gastroDev-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="gastroDev-half">
-            <input class="gastroDev-input gastroDev-border" type="text" placeholder="Name" required name="Name">
-          </div>
-          <div class="gastroDev-half">
-            <input class="gastroDev-input gastroDev-border" type="text" placeholder="Email" required name="Email">
-          </div>
-        </div>
-        <input class="gastroDev-input gastroDev-border" type="text" placeholder="Message" required name="Message">
-        <button class="gastroDev-button gastroDev-black gastroDev-right gastroDev-section" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </form>
+      <%= render 'notes/form', note: @note %>
     </div>
   </div>
 </div>

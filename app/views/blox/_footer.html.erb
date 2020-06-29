@@ -1,18 +1,5 @@
 <footer>
   <div class="container text-center">
-
-    <a href="https://www.gastronomic.online/coding-projects" target: 'blank', id="gastroyellow">GastroDev</a>
-    <span>Built on rona time.</span>
+      <a href="https://www.gastronomic.online/coding-projects" target: 'blank', id="gastroyellow">GastroDev</a>
   </div>
-  <% if user_signed_in? %>
-    Logged in as <strong><%= current_user.email %></strong>.
-    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'gastroDev-bar-item gastroDev-button gastroDev-hide-small' %>
-    <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'gastroDev-bar-item gastroDev-button gastroDev-hide-small'  %>
-  <% else %>
-    <%= link_to "Sign up", new_user_registration_path, :class => 'gastroDev-bar-item gastroDev-button gastroDev-hide-small'  %>
-    <%= link_to "Login", new_user_session_path, :class => 'gastroDev-bar-item gastroDev-button gastroDev-hide-small'  %>
-  <% end %>
-<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'gastroDev-bar-item gastroDev-button gastroDev-hide-small'  %>
-
-
 </footer>

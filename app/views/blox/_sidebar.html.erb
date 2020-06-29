@@ -1,26 +1,30 @@
-<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse mt-3">
   <div class="sidebar-sticky pt-3">
     <ul class="nav flex-column">
       <li class="nav-item">
-        <%= link_to home_dashboard_path, class: "nav-link active" do %>
-          <i class="fas fa-desktop"></i>
-          Dashboard <span class="sr-only">(current)</span>
+        <%= link_to root_path, class: "nav-link active" do %>
+          <i class="fas fa-home"></i>
+          HOME <span class="sr-only">(current)</span>
         <% end %>
       </li>
       <li class="nav-item">
         <%= link_to new_blog_path, class: "nav-link active" do %>
           <i class="fas fa-blog"></i>
-          New Blog <span class="sr-only">(current)</span>
+          NEW BLOG <span class="sr-only">(current)</span>
         <% end %>
       </li>
       <li class="nav-item">
         <%= link_to new_category_path, class: "nav-link" do %>
           <i class="fas fa-house-user"></i>
-          New Category <span class="sr-only">(current)</span>
+          NEW CATEGORY <span class="sr-only">(current)</span>
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <%= link_to notes_path, class: "nav-link" do %>
+          <i class="fas fa-house-user"></i>
+          NOTES <span class="sr-only">(current)</span>
         <% end %>
       </li>
     </ul>
-
-
   </div>
 </nav>

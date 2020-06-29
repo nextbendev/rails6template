@@ -10,18 +10,8 @@ class HomeController < ApplicationController
     @notes = Note.all
   end
 
-  def dashboard
-    @users = User.all
-    @blogs = Blog.all
-    @categories = Category.all
-    @notes = Note.all
-  end
 
-  private
-    def set_sidebar
-      @show_sidebar = true
-    end
 
     # Use callbacks to share common setup or constraints between actions.
-  
+
 end

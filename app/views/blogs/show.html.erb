@@ -1,7 +1,18 @@
-<div class="container-fluid mt-3">
-  <h1>Category: <%= @blog.category.category %></h1>
-  <h3><%= @blog.title %></h3>
-  <p><%= @blog.content%></p>
-  <%= link_to "Back", blogs_path, class: 'btn btn-outline-secondary' %>
-  <% if can? :update, @blog %> <%= link_to 'Edit', edit_blog_path(@blog) %> <% end %>
+<div class="container ">
+  <div class="card-4  gastroDev-white container">
+      <div class="gastroDev-container ">
+        <h3><b>Category: <%= @blog.category.category %></b></h3>
+        <h5><%= @blog.title %></h5>
+        <span class="gastroDev-opacity">Created at: <%= @blog.created_at %></span>
+      </div>
+      <div class="gastroDev-container">
+        <p><%= @blog.content%></p>
+      </div>
+      <div class="gastroDev-row ">
+        <div class="gastroDev-col m8 s12">
+          <%= link_to "Back", blogs_path, class: 'btn btn-outline-secondary' %>
+          <% if can? :update, @blog %> <%= link_to 'Edit', edit_blog_path(@blog) %> <% end %>
+        </div>
+      </div>
+    </div>
 </div>

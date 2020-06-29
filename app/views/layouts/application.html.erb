@@ -9,7 +9,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
   </head>
-  <%= render 'blox/navbar' %>
+
 
   <body id="<%= controller.controller_name %>" class="<%= controller.action_name %><%= "show-sidebar" if @show_sidebar.present? %>">
     <% if @show_sidebar.nil? %>
@@ -18,7 +18,6 @@
     </header>
     <%= yield %>
     <% else %>
-    <%= render 'blox/dashnav' %>
 
     <div class="container-fluid">
       <div class="row">

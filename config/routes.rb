@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  get 'junk/play'
+  get 'admin/dashboard'
   resources :notes
-  get 'home/dashboard'
   resources :categories
   resources :blogs
   devise_for :users

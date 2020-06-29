@@ -1,30 +1,38 @@
 <!-- Navbar (sit on top) -->
-<div class="gastroDev-top">
-  <div class="gastroDev-bar" id="myNavbar">
-    <a class="gastroDev-bar-item gastroDev-button gastroDev-hover-black gastroDev-hide-medium gastroDev-hide-large gastroDev-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <% if user_signed_in? %>
-    <%= link_to "HOME", root_path, class: 'gastroDev-bar-item gastroDev-button' %>
-    <%= link_to "DASHBOARD", home_dashboard_path, class: 'gastroDev-bar-item gastroDev-button' %>
-    <% else %>
-    <%= link_to "HOME", root_path, class: 'gastroDev-bar-item gastroDev-button' %>
-    <a href="#about" class="gastroDev-bar-item gastroDev-button gastroDev-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-    <a href="#portfolio" class="gastroDev-bar-item gastroDev-button gastroDev-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
-    <a href="#contact" class="gastroDev-bar-item gastroDev-button gastroDev-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-    <%= link_to blogs_path, class: "gastroDev-bar-item gastroDev-button gastroDev-hide-small" do %>
-      <i class="fas fa-blog"></i> Blog <span class="sr-only">(current)</span>
-    <% end %>
+<header>
+  <a class="gastroDev-bar-item gastroDev-button gastroDev-hover-black gastroDev-hide-medium gastroDev-hide-large gastroDev-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+    <i class="fa fa-bars"></i>
+  </a>
+  <% if user_signed_in? %>
+  <%= link_to root_path, class: "gastroDev-bar-item gastroDev-button " do %>
+    <i class="fas fa-home"></i> HOME <span class="sr-only">(current)</span>
   <% end %>
+  <%= link_to admin_dashboard_path, class: "gastroDev-bar-item gastroDev-button " do %>
+    <i class="fas fa-desktop"></i> DASHBOARD <span class="sr-only">(current)</span>
+  <% end %>
+  <%= link_to "LOGOUT", destroy_user_session_path, method: :delete, :class => 'gastroDev-bar-item gastroDev-button gastroDev-hide-small'  %>
+
+  <% else %>
+  <%= link_to root_path, class: "gastroDev-bar-item gastroDev-button" do %>
+    <i class="fas fa-home"></i> HOME <span class="sr-only">(current)</span>
+  <% end %>
+  <%= link_to root_path(anchor: 'about'), class: "gastroDev-bar-item gastroDev-button" do %>
+    <i class="fas fa-user"></i> ABOUT <span class="sr-only">(current)</span>
+  <% end %>
+  <%= link_to root_path(anchor: 'portfolio'), class: "gastroDev-bar-item gastroDev-button" do %>
+    <i class="fas fa-th"></i> PORTFOLIO <span class="sr-only">(current)</span>
+  <% end %>
+  <%= link_to root_path(anchor: 'contact'), class: "gastroDev-bar-item gastroDev-button" do %>
+    <i class="fas fa-envelope"></i> CONTACT <span class="sr-only">(current)</span>
+  <% end %>
+  <%= link_to blogs_path, class: "gastroDev-bar-item gastroDev-button" do %>
+    <i class="fas fa-blog"></i> Blog <span class="sr-only">(current)</span>
+  <% end %>
+  <%= link_to new_user_session_path, class: "gastroDev-bar-item gastroDev-button" do %>
+    <i class="fas fa-user-shield"></i> LOGIN <span class="sr-only">(current)</span>
+  <% end %>
+<% end %>
 
 
-  </div>
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="gastroDev-bar-block gastroDev-white gastroDev-hide gastroDev-hide-large gastroDev-hide-medium">
-    <a href="#about" class="gastroDev-bar-item gastroDev-button" onclick="toggleFunction()">ABOUT</a>
-    <a href="#portfolio" class="gastroDev-bar-item gastroDev-button" onclick="toggleFunction()">PORTFOLIO</a>
-    <a href="#contact" class="gastroDev-bar-item gastroDev-button" onclick="toggleFunction()">CONTACT</a>
-    <a href="#" class="gastroDev-bar-item gastroDev-button">SEARCH</a>
-  </div>
-</div>
+</header>

@@ -12,6 +12,14 @@
    line-height: 1.8;
  }
 
+ .center {
+   position: absolute;
+   top: 50%;
+   width: 100%;
+   text-align: center;
+   font-size: 18px;
+ }
+
  /* Create a Parallax Effect */
 .bgimg-2, .bgimg-3 {
    background-attachment: fixed;

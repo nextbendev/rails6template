@@ -1,0 +1,13 @@
+    <div class="card" style="width: 18rem;">
+      <% @notes.each do |note| %>
+      <div class="card-body">
+        <h5 class="card-title"><%= note.name %></h5>
+        <h6 class="card-subtitle mb-2 text-muted"><%= note.email %></h6>
+        <p class="card-text"><%= note.msg %></p>
+        <%= link_to 'Show', note, class: "card-link" %>
+        <%= link_to 'Destroy', note, method: :delete, class: "card-link", data: { confirm: 'Are you sure?' } %>
+      </div>
+        <% end %>
+    </div>
+
+    <%= link_to 'New Note', new_note_path %>
